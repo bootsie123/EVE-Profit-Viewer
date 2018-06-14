@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./main.css">
+  <script src="./main.js"></script>
+</head>
+<body>
+  <div id="upload">
+    <button id="circle" onclick="getFile()" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)" ondragleave="dragLeave()">
+    	<div id="uploadingText">Uploading...</div>
+    	<div style="height: 0px; width: 0px; overflow: hidden"> 
+			<input id="fileinput" type="file" onchange="fileSelected(this.files)"/>
+		</div>
+    	<img id="icon" src="./Upload Icon.svg" alt="Your browser does not support SVGs" style="pointer-events: none" width="75px" height="75px"/>
+    </button>
+  </div>
+</body>
+</html>
