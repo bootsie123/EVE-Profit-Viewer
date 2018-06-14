@@ -153,14 +153,19 @@ function displayData(file) {
 				var tableHeader = document.createElement("tr");
 				var itemName = document.createElement("td");
 				var profit = document.createElement("td");
+				var id = document.createElement("td");
 				
 				itemName.id = "header";
 				itemName.innerHTML = "Item Name";
 				profit.id = "header";
 				profit.innerHTML = "Profit (isk)";
 				profit.style.textAlign = "right";
+				id.id = "header";
+				id.innerHTML = "ID";
+				id.style.textAlign = "right";
 				
 				tableHeader.appendChild(itemName);
+				tableHeader.appendChild(id);
 				tableHeader.appendChild(profit);
 				
 				table.appendChild(tableHeader);
@@ -169,13 +174,17 @@ function displayData(file) {
 					var tr = document.createElement("tr");
 					var inner = document.createElement("td");
 					var outer = document.createElement("td");
+					var id = document.createElement("td");
 					
 					inner.id = "cellInner";
 					inner.innerHTML = object.profit;
 					outer.id = "cellOuter";
-					outer.innerHTML = object.key;
+					outer.innerHTML = object.name;
+					id.id = "cellInner";
+					id.innerHTML = object.id;
 					
 					tr.appendChild(outer);
+					tr.appendChild(id);
 					tr.appendChild(inner);
 					table.appendChild(tr);
 				});
