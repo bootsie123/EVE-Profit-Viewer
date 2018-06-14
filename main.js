@@ -6,8 +6,6 @@ function getFile() {
 function fileSelected(files) {
 	var icon = document.getElementById("icon");
 	var uploadingText = document.getElementById("uploadingText");
-	
-	document.getSelection().removeAllRanges();
 
 	icon.style.display = "none";
 	uploadingText.style.display = "initial";
@@ -27,7 +25,6 @@ function fileSelected(files) {
 
 function dropHandler(event) {
 	event.preventDefault();
-	document.getSelection().removeAllRanges();
 
 	var uploadTarget = document.getElementById("circle");
 	var icon = document.getElementById("icon");
