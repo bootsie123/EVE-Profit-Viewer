@@ -202,13 +202,19 @@ function displayData(file) {
 						var inner = document.createElement("td");
 						var outer = document.createElement("td");
 						var id = document.createElement("td");
+						var link = document.createElement("a");
 						
 						inner.id = "cellInner";
 						inner.innerHTML = object.profit;
 						outer.id = "cellOuter";
 						outer.innerHTML = object.name;
 						id.id = "cellInner";
-						id.innerHTML = object.id;
+						link.innerHTML = object.id;
+						link.href = "https://evemarketer.com/types/" + object.id;
+						link.target = "_blank";
+						link.style.color = "#484848";
+						
+						id.appendChild(link);
 						
 						tr.appendChild(outer);
 						tr.appendChild(id);
