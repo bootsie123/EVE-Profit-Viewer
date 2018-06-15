@@ -16,6 +16,15 @@
   border-radius: 50%;
   display: flex;
   justify-content: center;
+  transition: opacity 1s;
+}
+
+#circle.fade {
+	opacity: 0;
+}
+
+button:focus { /* csslint allow: outline-none */
+	outline: none;
 }
 
 #icon {
