@@ -148,7 +148,9 @@ function transition(element, callback) {
 		element.classList.toggle("fade");
 		
 		setTimeout(function() {
-			callback();
+			if (callback) {
+				callback();
+			}
 		}, 1000);
 	} else {
 		element.classList.toggle("fade");
@@ -156,7 +158,9 @@ function transition(element, callback) {
 		setTimeout(function() {
 			element.style.display =  "none";
 			
-			callback();
+			if (callback) {
+				callback();
+			}
 		}, 1000);
 	}
 }
@@ -176,6 +180,7 @@ function displayData(file) {
 					
 					table.id = "data";
 					table.cellSpacing = "0";
+					table.style.opacity = "0";
 					
 					var tableHeader = document.createElement("tr");
 					var itemName = document.createElement("td");
@@ -223,6 +228,10 @@ function displayData(file) {
 					});
 					
 					document.getElementById("upload").appendChild(table);	
+
+					setTimeout(function() {
+						table.style.opacity = "1";
+					}, 100);		
 				} catch(error) {
 					var uploadingText = document.getElementById("uploadingText");
 					var icon = document.getElementById("icon");

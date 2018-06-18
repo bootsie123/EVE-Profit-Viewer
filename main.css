@@ -46,7 +46,8 @@ button:focus { /* csslint allow: outline-none */
 	display: table;
 	width: 75%;
 	border: 1px solid rgb(230, 230, 230);
-	box-shadow: 0 0 5px 0 rgba(235, 235, 235, 245)
+	box-shadow: 0 0 5px 0 rgba(235, 235, 235, 245);
+	transition: opacity 1s;
 }
 
 #header {
